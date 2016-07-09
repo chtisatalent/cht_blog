@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5—indexedDB</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+
+            padding: 10px 0 0 10px;
+        }
+        .title {
+
+            margin: 50px 0 20px 0;
+            overflow: hidden;
+        }
+        .search {
+    
+            display: inline-block;
+            float: right;
+            margin-right: 2em;
+        }
+        #search {
+            
+            padding: 5px 0 5px 10px;
+        }
+        #search-but {
+
+            padding: 5px 10px;
+        }
+        .message-list {
+
+            border: 5px solid #ccc;
+        }
+        .message-list li {
+            
+            padding: 5px 0;
+            width: 100%;
+            font-size: 1.2em;
+            list-style: none;
+        }
+        .message-list .message-hidden-content {
+            
+            height: 23px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+        .message-list-th {
+
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+        }
+        #messagebord {
+            
+            padding: 10px 0 0 10px;
+            width: 500px;
+            height: 300px;
+            font-size: 1.5em;
+        }
+        .name-id-layout {
+    
+            overflow: hidden;
+        }
+        #userName,
+        #userId {
+            
+            float: left;
+            display: inline-block;
+            padding: 10px 0 10px 10px;
+            width: 242px;
+        }
+        #sure-but,
+        #reset-but {
+            
+            margin-top: 20px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#">
+        <textarea name="message" placeholder="请在此处留言" cols=10 rows=10 id="messagebord"></textarea>
+            <div class="name-id-layout">
+                <input type="text" name="name" id="userName" placeholder="请在此处填写留言者姓名">
+                <input type="text" name="id" id="userId" placeholder="请在此处填写留言者ID">
+            </div>
+        <input type="button" value="发表留言" id="sure-but">
+        <input type="reset" value="撤销" id="reset-but">
+    </form>
+
+    <h1 class="title">这是留言显示
+        <div class="search">
+            <input type="text" name="search" id="search">
+            <input type="button" value="搜索" id="search-but">
+        </div>
+    </h1>
+    <ul class="message-list">
+        <li>
+            <h3 class="message-list-th">ID</h3><h3 class="message-list-th">留言者</h3><h3 class="message-list-th">留言内容</h3><h3 class="message-list-th">留言时间</h3>
+        </li>
+    </ul>
+
+    <script src="indexedDB.js"></script>
+</body>
+</html>
