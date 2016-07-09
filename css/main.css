@@ -396,7 +396,7 @@ h2.resp-accordion:hover {
 #map {
     display: block;
     width: 100% !important;
-    height: 300px !important;
+    height: 500px !important;
     margin: 0 auto;
     -moz-box-shadow: 0 5px 20px #ccc;
     -webkit-box-shadow: 0 5px 20px #ccc;
